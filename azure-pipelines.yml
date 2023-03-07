@@ -30,9 +30,9 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'war'
     publishLocation: 'Container'
-- task: AzureRmWebAppDeployment@4
+- task: AzureWebApp@1
   inputs:
-    ConnectionType: 'PublishProfile'
-    PublishProfilePath: '$(System.DefaultWorkingDirectory)/**/*.pubxml'
-    PublishProfilePassword: 'aMcZHyq1hAa3pf0TxHqSFAD3tL7Aacnzscr8QgK6s4iqz1gCipzymmhkuSDD'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.war'
+    azureSubscription: 'allshahulhameed'
+    appType: 'webAppLinux'
+    appName: 'almas07'
+    package: '$(System.DefaultWorkingDirectory)/**/*.war'
