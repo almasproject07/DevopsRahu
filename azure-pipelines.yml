@@ -32,7 +32,8 @@ steps:
     publishLocation: 'Container'
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: 'allshahulhameed'
+    azureSubscription: 'Managed'
     appType: 'webAppLinux'
     appName: 'almas07'
     package: '$(System.DefaultWorkingDirectory)/**/*.war'
+  
